@@ -1,4 +1,7 @@
 ResTest2::Application.routes.draw do
+  resources :t_cal_days
+
+
   resources :periods
 
 
