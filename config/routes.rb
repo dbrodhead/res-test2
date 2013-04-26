@@ -1,4 +1,7 @@
 ResTest2::Application.routes.draw do
+  resources :training_days
+
+
   resources :trades
 
 

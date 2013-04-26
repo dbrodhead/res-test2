@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: training_days
+#
+#  id           :integer          not null, primary key
+#  t_cal_day_id :integer
+#  weekday      :string(255)
+#  details      :text
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  t_cal_day_id: 1
+  weekday: MyString
+  details: MyText
+
+two:
+  t_cal_day_id: 1
+  weekday: MyString
+  details: MyText
