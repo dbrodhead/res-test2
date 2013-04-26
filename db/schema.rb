@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130426184853) do
+ActiveRecord::Schema.define(:version => 20130426193633) do
 
   create_table "periods", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(:version => 20130426184853) do
   create_table "t_cal_days", :force => true do |t|
     t.date     "date"
     t.text     "details"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "trades", :force => true do |t|
+    t.string   "trade"
+    t.integer  "mosid"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
