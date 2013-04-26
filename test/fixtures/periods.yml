@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  number: 1
+  stime: 2013-04-26 18:37:06
+  etime: 2013-04-26 18:37:06
+
+two:
+  name: MyString
+  number: 1
+  stime: 2013-04-26 18:37:06
+  etime: 2013-04-26 18:37:06
