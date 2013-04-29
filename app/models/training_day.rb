@@ -12,4 +12,6 @@
 
 class TrainingDay < ActiveRecord::Base
   attr_accessible :details, :t_cal_day_id, :weekday
+  
+  belongs_to :t_cal_day
 end

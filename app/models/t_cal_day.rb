@@ -11,4 +11,6 @@
 
 class TCalDay < ActiveRecord::Base
   attr_accessible :date, :details
+  
+  has_many :training_days
 end
