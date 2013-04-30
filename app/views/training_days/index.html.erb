@@ -17,7 +17,7 @@
     <% @training_days.each do |training_day| %>
       <tr>
         <td><%= link_to training_day.id, training_day_path(training_day) %></td>
-        <td><%= training_day.t_cal_day_id %></td>
+        <td><%= training_day.t_cal_day.date %></td>
         <td><%= training_day.weekday %></td>
         <td><%= training_day.details %></td>
         <td><%=l training_day.created_at %></td>

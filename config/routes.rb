@@ -1,4 +1,7 @@
 ResTest2::Application.routes.draw do
+  resources :tsessions
+
+
   resources :training_days
 
 

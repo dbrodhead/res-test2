@@ -14,4 +14,6 @@ class TrainingDay < ActiveRecord::Base
   attr_accessible :details, :t_cal_day_id, :weekday
   
   belongs_to :t_cal_day
+  has_many :tsessions
+  has_many :trades, :through => :tsessions
 end

@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: tsessions
+#
+#  id              :integer          not null, primary key
+#  training_day_id :integer
+#  trade_id        :integer
+#  period_id       :integer
+#  instructor      :string(255)
+#  activity        :text
+#  location        :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  training_day_id: 1
+  trade_id: 1
+  period_id: 1
+  instructor: MyString
+  activity: MyText
+  location: MyString
+
+two:
+  training_day_id: 1
+  trade_id: 1
+  period_id: 1
+  instructor: MyString
+  activity: MyText
+  location: MyString

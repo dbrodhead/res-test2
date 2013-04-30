@@ -11,4 +11,7 @@
 
 class Trade < ActiveRecord::Base
   attr_accessible :mosid, :trade
+  
+  has_many :tsessions
+  has_many :training_days, :through => :tsessions
 end
