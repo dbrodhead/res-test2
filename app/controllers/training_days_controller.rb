@@ -13,7 +13,7 @@ class TrainingDaysController < ApplicationController
   # GET /training_days/1
   # GET /training_days/1.json
   def show
-    @training_day = TrainingDay.find(params[:id])
+    @training_day = TrainingDay.includes(:tsessions, :order => "period_name").find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -44,6 +44,20 @@ class TrainingDaysController < ApplicationController
 
     respond_to do |format|
       if @training_day.save
+        # This code is to create a new tsession for the specified date for each trade and each period.
+        # @trades = Trade.all
+        # @periods = Period.all
+        # @trades.each do |i|
+          # @tsession = Tsession.new(:training_day_id => i., :trade_id => )
+          # @tsession.save
+          # if @training_day.params[:weekday] = "Thursday"
+            #need some code
+          # else if @training_day.params[:weekday] = "Saturday"
+            #need more code
+          # else
+            #and lastely
+          # end
+        # end
         format.html { redirect_to @training_day, notice: 'Training day was successfully created.' }
         format.json { render json: @training_day, status: :created, location: @training_day }
       else
