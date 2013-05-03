@@ -13,7 +13,7 @@ class TradesController < ApplicationController
   # GET /trades/1
   # GET /trades/1.json
   def show
-    @trade = Trade.find(params[:id])
+    @trade = Trade.includes(:tsessions).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

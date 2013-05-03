@@ -13,7 +13,7 @@ class TrainingDaysController < ApplicationController
   # GET /training_days/1
   # GET /training_days/1.json
   def show
-    @training_day = TrainingDay.includes(:tsessions, :order => "period_name").find(params[:id])
+    @training_day = TrainingDay.includes(:tsessions).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
