@@ -20,13 +20,13 @@
     <% @tsessions.each do |tsession| %>
       <tr>
         <td><%= link_to tsession.id, tsession_path(tsession) %></td>
-        <td><%= tsession.training_day.t_cal_day.date %></td>
+        <td><%= tsession.training_day.day %></td>
         <td><%= tsession.trade.trade %></td>
         <td><%= tsession.period.number %></td>
         <td><%= tsession.instructor %></td>
         <td><%= tsession.activity %></td>
         <td><%= tsession.location %></td>
-        <td><%=l tsession.created_at %></td>
+        <td><%= tsession.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_tsession_path(tsession), :class => 'btn btn-mini' %>

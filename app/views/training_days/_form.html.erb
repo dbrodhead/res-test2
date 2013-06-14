@@ -1,8 +1,8 @@
 <%= form_for @training_day, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.label :t_cal_day_id, :class => 'control-label' %>
+    <%= f.label :day, :class => 'control-label' %>
     <div class="controls">
-      <%= f.collection_select(:t_cal_day_id, TCalDay.all, :id, :date) %>
+      <%= f.date_select :day, :class => 'date_select' %>
     </div>
   </div>
   <div class="control-group">

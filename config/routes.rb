@@ -1,4 +1,6 @@
 ResTest2::Application.routes.draw do
+  devise_for :users
+
   resources :tsessions
 
 
@@ -8,13 +10,10 @@ ResTest2::Application.routes.draw do
   resources :trades
 
 
-  resources :t_cal_days
-
-
   resources :periods
 
 
-  root to: 'static_pages#home'
+  root :to => 'static_pages#home'
   match '/help', to: 'static_pages#help'
   match '/about', to: 'static_pages#about'
   match '/training_calendar', to: 'static_pages#training_calendar'

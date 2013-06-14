@@ -11,20 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130430144417) do
+ActiveRecord::Schema.define(:version => 20130503173906) do
 
   create_table "periods", :force => true do |t|
     t.string   "name"
     t.integer  "number"
     t.time     "stime"
     t.time     "etime"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "t_cal_days", :force => true do |t|
-    t.date     "date"
-    t.text     "details"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -37,11 +30,11 @@ ActiveRecord::Schema.define(:version => 20130430144417) do
   end
 
   create_table "training_days", :force => true do |t|
-    t.integer  "t_cal_day_id"
     t.string   "weekday"
     t.text     "details"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.date     "day"
   end
 
   create_table "tsessions", :force => true do |t|

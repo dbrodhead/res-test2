@@ -24,7 +24,7 @@
   <tbody>
     <% @trade.tsessions.each do |i| %>
       <tr>
-        <td><%= i.training_day.t_cal_day.date %></td>
+        <td><%= i.training_day.day %></td>
         <td><%= i.trade.trade %></td>
         <td><%= i.period.name %></td>
         <td><%= i.instructor %></td>
